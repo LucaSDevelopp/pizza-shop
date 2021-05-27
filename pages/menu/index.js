@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { getAvailablePizzas } from "../../DUMMY_PIZZAS";
-import PizzeList from "../../src/components/Pizze/pizze-list";
+import PizzeList from "../../components/Pizze/pizze-list";
 
 //Parent: App
 
