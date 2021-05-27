@@ -4,7 +4,7 @@
 	border: none;
 	background-color: #4d1601;
 	color: white;
-	padding: 0.75em 2em;
+	padding: 0.75rem 0.75rem;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -18,16 +18,16 @@
 }
 
 .icon {
-	width: 1.35em;
-	height: 1.35em;
+	width: 2rem;
+	height: 2rem;
 	margin-right: 0.5em;
 }
 
 .badge {
 	background-color: #b94517;
-	padding: 0.25em 1em;
+	padding: 1em 1em;
 	border-radius: 25px;
-	margin-left: 1em;
+
 	font-weight: bold;
 }
 
