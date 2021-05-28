@@ -15,7 +15,7 @@
 }
 
 .logo {
-	flex: 2 1 20%;
+	flex: 0 0 20%;
 	order: 1;
 	left: 2px;
 	color: #fde9c9;
@@ -23,7 +23,7 @@
 	cursor: pointer;
 	align-self: center;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	height: 5rem;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .cart {
-	flex: 2 1 20%;
+	flex: 0 0 20%;
 	order: 3;
 	padding: 0 2%;
 }
@@ -47,9 +47,13 @@
 	}
 	.cart {
 		order: 2;
-		justify-content: flex-end;
+		align-content: flex-end;
 	}
 	.logo {
-		justify-content: space-around;
+		padding: 0 2%;
+		justify-content: center;
+	}
+	.brand {
+		justify-content: flex-end;
 	}
 }

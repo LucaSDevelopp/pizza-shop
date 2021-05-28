@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Fragment } from "react";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton/HeaderCartButton";
+import HomeIcon from "./HomeIcon/HomeIcon";
+import UserIconUnlogged from "./HomeIcon/UserIcon/UserIconUnlogged";
 
 const Header = (props) => {
 	return (
