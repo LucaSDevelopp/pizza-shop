@@ -1,7 +1,6 @@
-import React from "react";
-import Card from "../UI/Card/Card";
-import PizzaItem from "./pizza-item/pizza-item";
-import classes from "./pizze-list.module.css";
+import Card from "../../UI/Card/Card";
+import PizzaItem from "./PizzaItem/PizzaItem";
+import classes from "./PizzeList.module.css";
 
 const PizzeList = (props) => {
 	const { items } = props;

@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import { getAvailablePizzas } from "../../DUMMY_PIZZAS";
-import PizzeList from "../../components/Pizze/pizze-list";
+import PizzeList from "../../components/foods/pizze/PizzeList";
 
-//Parent: App
+//my-domain/menu -> list of all types of food: pizzas, calzone, panzerotto...
 
 const AvailablePizzas = () => {
 	const availablePizzas = getAvailablePizzas();

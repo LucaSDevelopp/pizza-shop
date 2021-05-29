@@ -14,8 +14,6 @@ const PizzaId = () => {
 	}
 	const { name, image, ingredients } = selectedPizza;
 	console.log(name, image, ingredients);
-	// const image = "/" + selectedPizza.image;
-	// console.log(`${image}`);
 
 	return (
 		<Fragment>

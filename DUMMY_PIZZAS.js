@@ -4,7 +4,8 @@ const DUMMY_PIZZAS = [
 		name: "Margherita",
 		price: 4.8,
 		ingredients: ["Polpa di pomodoro", "mozzarella", "origano", "basilico"],
-		image: "/images/margherita.jpg",
+		image:
+			"https://primochef.it/wp-content/uploads/2019/07/SH_pizza_napoletana.jpg",
 		isAvailable: true,
 	},
 	{

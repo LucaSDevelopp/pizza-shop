@@ -1,0 +1,18 @@
+.food {
+	display: flex;
+	justify-content: space-between;
+	margin: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #ccc;
+}
+
+.food h3 {
+	margin: 0 0 0.25rem 0;
+}
+
+.link:hover {
+	color: #8a2b06;
+	font-weight: bolder;
+	font-size: larger;
+	cursor: pointer;
+}

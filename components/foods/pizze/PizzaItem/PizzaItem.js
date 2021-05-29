@@ -1,5 +1,5 @@
 import Link from "next/link";
-import classes from "./pizza-item.module.css";
+import classes from "./PizzaItem.module.css";
 const PizzaItem = (props) => {
 	const price = `€ ${props.price}`;
 	const ingredients = props.ingredients.join(", ");
