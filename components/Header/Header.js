@@ -15,8 +15,8 @@ const Header = (props) => {
 						<Image
 							src="/icons/pizza-colori.png"
 							alt="Home Pizza Shop"
-							width="70px"
-							height="70px"
+							width="64px"
+							height="64px"
 							layout="fixed"
 						/>
 					</Link>
@@ -25,24 +25,25 @@ const Header = (props) => {
 					</h1>
 				</div>
 				<div className={classes.navbarLinks}>
-					<h3>
-						<Link href="/menu">MENU</Link>
-					</h3>
-					<h3>
-						<Link href="/menu">BEVANDE</Link>
-					</h3>
-					<h3>
-						<Link href="/promozioni">PROMOZIONI</Link>
-					</h3>
-					<h3>
-						<Link
-							href={{
-								pathname: "/accedi",
-							}}
-						>
-							ACCEDI
-						</Link>
-					</h3>
+					<Link href="/menu">
+						<h3>MENU</h3>
+					</Link>
+
+					<Link href="/menu">
+						<h3>BEVANDE</h3>
+					</Link>
+
+					<Link href="/promozioni">
+						<h3>PROMOZIONI</h3>
+					</Link>
+
+					<Link
+						href={{
+							pathname: "/accedi",
+						}}
+					>
+						<h3>ACCEDI</h3>
+					</Link>
 				</div>
 
 				<div className={classes.cart}>

@@ -43,7 +43,14 @@
 
 @media (max-width: 798px) {
 	.navbarLinks {
+		display: flex;
+		height: 3rem;
 		order: 3;
+		align-content: flex-start;
+	}
+	.navbarLinks h3 {
+		display: flex;
+		align-content: flex-start;
 	}
 	.cart {
 		order: 2;

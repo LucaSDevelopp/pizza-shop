@@ -10,6 +10,7 @@ const FoodList = (props) => {
 				key={item.id}
 				id={item.id}
 				name={item.name}
+				icon={item.icon}
 				// description={item.description}
 				image={item.image}
 			/>
