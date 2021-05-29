@@ -8,7 +8,14 @@ const FoodItem = (props) => {
 			<Link href={exploreLink}>
 				<div className={classes.link}>
 					<h2 className={classes.title}>{props.name}</h2>
-					<Image src={props.icon} alt={props.name} width="80px" height="80px" />
+					<div className={classes.image}>
+						<Image
+							src={props.icon}
+							alt={props.name}
+							width="auto"
+							height="auto"
+						/>
+					</div>
 				</div>
 			</Link>
 		</li>
