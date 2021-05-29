@@ -15,7 +15,7 @@ export default function Home() {
 			<Head>
 				<title>Pizza Shop</title>
 				<meta name="Pizza Shop" content="A new way to order pizzas" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/icons/favicon.ico" />
 			</Head>
 			<FoodList items={DUMMY_FOODS} />
 			{/* <PizzeList items={availablePizzas} /> */}
