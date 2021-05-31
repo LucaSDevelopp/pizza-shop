@@ -25,6 +25,8 @@
 	font-weight: bolder;
 	font-size: larger;
 	cursor: pointer;
+	height: 7rem;
+	text-shadow: 1px 1px 1px #000000;
 }
 
 @media (max-width: 798px) {

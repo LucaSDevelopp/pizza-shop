@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import Phone from "../UI/symbols/Phone";
+import userAdd from "../UI/symbols/userAdd";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton/HeaderCartButton";
 import HomeIcon from "./HomeIcon/HomeIcon";
@@ -40,7 +41,10 @@ const Header = (props) => {
 					</Link>
 
 					<Link href="/accedi">
-						<h3>ACCEDI</h3>
+						<div>
+							<userAdd />
+							<h3>ACCEDI</h3>
+						</div>
 					</Link>
 				</div>
 				<div className={classes.cart}>
