@@ -41,9 +41,9 @@
 	padding: 0 2%;
 }
 .navbarLinks h3:hover {
-	background-color: white;
+	color: white;
 	font-weight: bolder;
-	font-size: larger;
+	font-size: x-large;
 	cursor: pointer;
 }
 

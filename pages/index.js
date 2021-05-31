@@ -1,14 +1,12 @@
+import fs from "fs/promises";
+import path from "path";
 import Head from "next/head";
-import { DUMMY_FOODS } from "../DUMMY_FOODS";
 import FoodList from "../components/foods/Food-list";
-import { getAvailablePizzas } from "../DUMMY_PIZZAS";
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 //my-domain/
-
-export default function Home() {
-	const availablePizzas = getAvailablePizzas();
+function Home(props) {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -24,9 +22,18 @@ export default function Home() {
 				objectFit="cover"
 				objectPosition="center"
 			/> */}
-			<FoodList items={DUMMY_FOODS} />
-			{/* <PizzeList items={availablePizzas} /> */}
-			{/* <FoodList items={DUMMY_FOODS} /> */}
+			<FoodList items={props.foods} />
 		</div>
 	);
 }
+
+export async function getStaticProps() {
+	const filePath = path.join(process.cwd(), "data", "DUMMY_FOODS.json"); //join in order to be correctly consumed by readFile()
+	const jsonData = await fs.readFile(filePath); //the cutrrent working directory is the overall project folder(instead of the pages folder)
+	const data = JSON.parse(jsonData); //converts it into a regular JS object
+	return {
+		props: { foods: data.foods },
+	};
+}
+
+export default Home;

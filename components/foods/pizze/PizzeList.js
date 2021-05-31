@@ -3,16 +3,16 @@ import PizzaItem from "./PizzaItem/PizzaItem";
 import classes from "./PizzeList.module.css";
 
 const PizzeList = (props) => {
-	const { items } = props;
-	const pizzeList = items.map((item) => {
+	const { pizzas } = props;
+	const pizzeList = pizzas.map((pizza) => {
 		return (
 			<PizzaItem
-				key={item.id}
-				id={item.id}
-				name={item.name}
-				ingredients={item.ingredients}
-				image={item.image}
-				price={item.price}
+				key={pizza.id}
+				id={pizza.id}
+				name={pizza.name}
+				ingredients={pizza.ingredients}
+				image={pizza.image}
+				price={pizza.price}
 			/>
 		);
 	});
