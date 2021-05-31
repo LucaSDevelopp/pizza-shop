@@ -7,13 +7,14 @@ const PizzaItem = (props) => {
 	const exploreLink = `/menu/pizze/${props.id}`;
 	return (
 		<li className={classes.pizza}>
-			<div className={classes.link}>
-				<h3 className={classes.title}>{props.name}</h3>
+			<Link href={exploreLink}>
+				<div className={classes.link}>
+					<h3 className={classes.title}>{props.name}</h3>
 
-				<div className={classes.ingredients}>{ingredients}</div>
-				<div className={classes.price}>{price}</div>
-			</div>
-
+					<div className={classes.ingredients}>{ingredients}</div>
+					<div className={classes.price}>{price}</div>
+				</div>
+			</Link>
 			<FoodItemForm />
 		</li>
 	);

@@ -1,17 +1,17 @@
 {
 	"foods": [
 		{
-			"id": "focacce",
-			"name": "Focacce",
-			"icon": "/icons/focacciaAnna.png",
-			"image": "/images/focacce/focacce-menu",
-			"isAvailable": true
-		},
-		{
 			"id": "pizze",
 			"name": "Pizze",
 			"image": "/images/pizze/pizze-menu",
 			"icon": "/icons/pizzaAnna.png",
+			"isAvailable": true
+		},
+		{
+			"id": "focacce",
+			"name": "Focacce",
+			"icon": "/icons/focacciaAnna.png",
+			"image": "/images/focacce/focacce-menu",
 			"isAvailable": true
 		},
 		{
