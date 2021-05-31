@@ -22,7 +22,7 @@ function Home(props) {
 				objectFit="cover"
 				objectPosition="center"
 			/> */}
-			<FoodList items={props.foods} />
+			<FoodList foods={props.foods} />
 		</div>
 	);
 }

@@ -3,16 +3,16 @@ import FoodItem from "./Food-item/FoodItem";
 import classes from "./Food-list.module.css";
 
 const FoodList = (props) => {
-	const { items } = props;
-	const foodList = items.map((item) => {
+	const { foods } = props;
+	const foodList = foods.map((food) => {
 		return (
 			<FoodItem
-				key={item.id}
-				id={item.id}
-				name={item.name}
-				icon={item.icon}
+				key={food.id}
+				id={food.id}
+				name={food.name}
+				icon={food.icon}
 				// description={item.description}
-				image={item.image}
+				image={food.image}
 			/>
 		);
 	});

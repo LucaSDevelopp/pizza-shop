@@ -3,7 +3,7 @@ import classes from "./PizzaItem.module.css";
 const PizzaItem = (props) => {
 	const price = `€ ${props.price}`;
 	const ingredients = props.ingredients.join(", ");
-	const exploreLink = `/menu/[pizzaMenuId]/${props.id}`;
+	const exploreLink = `/menu/pizze/${props.id}`;
 	return (
 		<li className={classes.pizza}>
 			<Link href={exploreLink}>

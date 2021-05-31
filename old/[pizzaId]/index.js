@@ -1,13 +1,12 @@
 import { useRouter } from "next/router";
 import { Fragment } from "react";
-import { getPizzaById } from "../../../../DUMMY_PIZZAS";
 import Image from "next/image";
 
-const PizzaId = () => {
+const PizzaId = (props) => {
 	const router = useRouter();
 	const pizzaId = router.query.pizzaId;
 	console.log(pizzaId);
-	const selectedPizza = getPizzaById(pizzaId);
+	const selectedPizza = pizzas.find((pizza) => pizza.id === id);
 
 	if (!selectedPizza) {
 		return <p>No Pizza Found</p>;

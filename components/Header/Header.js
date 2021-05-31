@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
+import Phone from "../UI/symbols/Phone";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton/HeaderCartButton";
 import HomeIcon from "./HomeIcon/HomeIcon";
@@ -15,14 +16,14 @@ const Header = (props) => {
 						<Image
 							src="/icons/pizza-colori.png"
 							alt="Home Pizza Shop"
-							width="64px"
-							height="64px"
+							width="56px"
+							height="56px"
 							layout="fixed"
 						/>
 					</Link>
-					<h1 className={classes.brandName}>
+					<h2 className={classes.brandName}>
 						<Link href="/">Brand </Link>
-					</h1>
+					</h2>
 				</div>
 				<div className={classes.navbarLinks}>
 					<Link href="/menu">
@@ -45,7 +46,6 @@ const Header = (props) => {
 						<h3>ACCEDI</h3>
 					</Link>
 				</div>
-
 				<div className={classes.cart}>
 					<HeaderCartButton onClick={props.onShowCart} />
 				</div>
