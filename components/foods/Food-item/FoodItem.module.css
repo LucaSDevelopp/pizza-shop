@@ -1,23 +1,22 @@
-.food {
-	margin: 1rem;
-	padding-bottom: 1rem;
-	border-bottom: 1px solid #ccc;
-	align-items: center;
-}
 .link {
+	height: 5rem;
+	padding: 0 1rem;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	color: #92320c;
 	color: #8a2b06;
 	align-items: center;
+	border-bottom: 1px solid #ccc;
 }
 .image {
-	width: auto;
-	object-fit: scale-down;
+	display: flex;
+	width: 110px;
+	height: 70px;
+	align-self: center;
 }
 
-.food h3 {
+.link h3 {
 	margin: 0 0 0.25rem 0;
 }
 
@@ -26,4 +25,7 @@
 	font-weight: bolder;
 	font-size: larger;
 	cursor: pointer;
+}
+
+@media (max-width: 798px) {
 }
