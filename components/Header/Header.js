@@ -24,6 +24,7 @@ const Header = (props) => {
 					<h2 className={classes.brandName}>
 						<Link href="/">Brand </Link>
 					</h2>
+					<div></div>
 				</div>
 				<div className={classes.navbarLinks}>
 					<Link href="/menu">
@@ -38,11 +39,7 @@ const Header = (props) => {
 						<h3>PROMOZIONI</h3>
 					</Link>
 
-					<Link
-						href={{
-							pathname: "/accedi",
-						}}
-					>
+					<Link href="/accedi">
 						<h3>ACCEDI</h3>
 					</Link>
 				</div>

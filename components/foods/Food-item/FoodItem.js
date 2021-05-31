@@ -13,8 +13,8 @@ const FoodItem = (props) => {
 					<Image
 						src={props.icon}
 						alt={props.name}
-						width="120px"
-						height="75px"
+						width="100px"
+						height="60px"
 					/>
 				</div>
 			</div>
