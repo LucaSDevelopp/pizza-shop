@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import Phone from "../UI/symbols/Phone";
-import userAdd from "../UI/symbols/userAdd";
+import UserAdd from "../UI/symbols/UserAdd";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton/HeaderCartButton";
 import HomeIcon from "./HomeIcon/HomeIcon";
@@ -11,7 +11,7 @@ import UserIconUnlogged from "./HomeIcon/UserIcon/UserIconUnlogged";
 const Header = (props) => {
 	return (
 		<Fragment>
-			<header className={classes.navbar}>
+			{/* <header className={classes.navbar}>
 				<div className={classes.logo}>
 					<Link href="/" className={classes.image}>
 						<Image
@@ -50,7 +50,7 @@ const Header = (props) => {
 				<div className={classes.cart}>
 					<HeaderCartButton onClick={props.onShowCart} />
 				</div>
-			</header>
+			</header> */}
 		</Fragment>
 	);
 };

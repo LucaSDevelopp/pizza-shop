@@ -2,7 +2,8 @@ import Link from "next/link";
 import classes from "./FoodItem.module.css";
 import Image from "next/image";
 const FoodItem = (props) => {
-	const exploreLink = `/menu/${props.id}`;
+	// const exploreLink = `/menu/${props.id}`;
+	const exploreLink = "/menu";
 	return (
 		<Link href={exploreLink}>
 			<div className={classes.link}>

@@ -7,6 +7,10 @@ import { Fragment } from "react";
 const MenuId = (props) => {
 	const { loadedFood } = props;
 
+	if (!loadedFood) {
+		return <p>Loading...</p>;
+	}
+
 	// if (!selectedFoodId) {
 	// 	return <p>No Food Found</p>;
 	// }
@@ -28,15 +32,24 @@ const MenuId = (props) => {
 	);
 };
 
+async function getData() {
+	const filePath = path.join(process.cwd(), "data", "DUMMY_FOODS.json"); //join in order to be correctly consumed by readFile()
+	const jsonData = await fs.readFile(filePath); //the cutrrent working directory is the overall project folder(instead of the pages folder)
+	const data = JSON.parse(jsonData); //converts it into a regular JS object
+	return data;
+}
+
 //here returns the props
 export async function getStaticProps(context) {
 	const { params } = context;
 	const foodURLId = params.menuId;
-	const filePath = path.join(process.cwd(), "data", "DUMMY_FOODS.json"); //join in order to be correctly consumed by readFile()
-	const jsonData = await fs.readFile(filePath); //the cutrrent working directory is the overall project folder(instead of the pages folder)
-	const data = JSON.parse(jsonData); //converts it into a regular JS object
+	const data = await getData(); //load data from database
 
-	const selectedFoodId = data.foods.find((food) => food.id === foodURLId);
+	const selectedFoodId = data.foods.find((food) => food.id === foodURLId); //comapare data database with url parameters and return matching item
+	if (!selectedFoodId) {
+		return { notFound: true }; //to use when fallback is true in getStaticPaths
+	}
+
 	return {
 		props: { loadedFood: selectedFoodId },
 	};
@@ -44,16 +57,13 @@ export async function getStaticProps(context) {
 
 //here returns the paths (dynamic)
 export async function getStaticPaths() {
+	const data = await getData();
+
+	const ids = data.foods.map((food) => food.id); //return array with all ids
+
+	const pathsWithParams = ids.map((id) => ({ params: { menuId: id } }));
 	return {
-		paths: [
-			{ params: { menuId: "focacce" } },
-			{ params: { menuId: "pizze" } },
-			{ params: { menuId: "calzoni" } },
-			{ params: { menuId: "panini" } },
-			{ params: { menuId: "panini-hamburger" } },
-			{ params: { menuId: "fritti" } },
-			{ params: { menuId: "dessert" } },
-		],
+		paths: pathsWithParams,
 		fallback: false,
 	};
 }

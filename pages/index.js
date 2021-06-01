@@ -7,6 +7,11 @@ import styles from "../styles/Home.module.css";
 
 //my-domain/
 function Home(props) {
+	const { foods } = props;
+
+	if (!foods) {
+		return <p>Loading...</p>;
+	}
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -22,7 +27,7 @@ function Home(props) {
 				objectFit="cover"
 				objectPosition="center"
 			/> */}
-			<FoodList foods={props.foods} />
+			<FoodList foods={foods} />
 		</div>
 	);
 }
@@ -31,8 +36,22 @@ export async function getStaticProps() {
 	const filePath = path.join(process.cwd(), "data", "DUMMY_FOODS.json"); //join in order to be correctly consumed by readFile()
 	const jsonData = await fs.readFile(filePath); //the cutrrent working directory is the overall project folder(instead of the pages folder)
 	const data = JSON.parse(jsonData); //converts it into a regular JS object
+
+	if (!data) {
+		return {
+			redirect: {
+				destination: "/no-data",
+			},
+		};
+	}
+
+	if (data.foods.lenght === 0) {
+		return { notFound: true };
+	}
+
 	return {
 		props: { foods: data.foods },
+		revalidate: 10, //revalidate the request after a certaina mount of seconds(gestServerSideProps don't need this because will always run again)
 	};
 }
 

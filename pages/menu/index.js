@@ -6,9 +6,14 @@ import PizzeList from "../../components/foods/pizze/PizzeList";
 //my-domain/menu -> list of all types of food: pizzas, calzone, panzerotto...
 
 const AvailablePizzas = (props) => {
+	const { pizzas } = props;
+	if (!pizzas) {
+		return <p>Loading...</p>;
+	}
+
 	return (
 		<Fragment>
-			<PizzeList pizzas={props.pizzas} />
+			<PizzeList pizzas={pizzas} />
 		</Fragment>
 	);
 };

@@ -1,4 +1,4 @@
-const userLoggedIn = () => {
+const UserLoggedIn = () => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ const userLoggedIn = () => {
 	);
 };
 
-export default userLoggedIn;
+export default UserLoggedIn;
